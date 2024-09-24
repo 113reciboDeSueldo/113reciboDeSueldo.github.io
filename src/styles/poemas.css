@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center; /* Centrado horizontalmente */
     margin-top: 50px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Fuente general */
 }
 
 header {
@@ -14,20 +15,31 @@ header {
 }
 
 h1 {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 600;
     margin: 5px;
 }
 
 h2 {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 600;
     color: grey;
-    margin: 5px;
+}
+
+.poemas {
+    padding: 30px; /* Añadir un poco de padding */
+    max-width: 600px; /* Ancho máximo para el contenedor de poemas */
+}
+
+.poemas p {
+    font-style: italic; /* Estilo en cursiva */
+    font-family: 'Georgia', serif; /* Fuente bonita */
+    font-size: 18px; /* Tamaño de fuente */
+    margin: 10px 0; /* Espaciado entre poemas */
+    color: #3a0846; /* Color de texto */
 }
 
 button {
-    padding: 20px 60px; border-radius: 10px;
+    padding: 20px 60px;
+    border-radius: 10px;
     margin: 20px;
     font-size: 19px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -43,7 +55,8 @@ button:hover {
 }
 
 @media (min-width: 375px) and (max-width: 414px) {
-    section .galeria img {
-        width: calc(50% - 10px); /* Dos imágenes por fila en pantallas más grandes */
+
+    .poemas p {
+        font-size: 16px; /* Ajustar el tamaño de fuente en pantallas más pequeñas */
     }
 }

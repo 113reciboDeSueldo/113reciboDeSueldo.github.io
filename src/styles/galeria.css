@@ -23,9 +23,19 @@ h2 {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 600;
     color: grey;
-    margin: 5px;
 }
 
+section .galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten */
+    justify-content: center; /* Centrado de las imágenes */
+}
+
+section .galeria img {
+    /* width: 150px;  */
+    /* height: auto;  */
+    margin: 5px; 
+}
 button {
     padding: 20px 60px; border-radius: 10px;
     margin: 20px;
@@ -43,7 +53,7 @@ button:hover {
 }
 
 @media (min-width: 375px) and (max-width: 414px) {
-    section .galeria img {
-        width: calc(50% - 10px); /* Dos imágenes por fila en pantallas más grandes */
-    }
+    /* section .galeria img {
+        width: calc(50% - 10px);
+    } */
 }
