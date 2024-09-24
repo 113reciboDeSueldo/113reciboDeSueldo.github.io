@@ -1,0 +1,20 @@
+body {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 { 
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin: 5px;
+}
+h3 { 
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: grey;
+}
