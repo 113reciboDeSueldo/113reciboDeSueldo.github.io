@@ -1,16 +1,15 @@
 body {
-    width: 100%; /* Cambiado a 100% para ocupar todo el ancho */
+    width: 100%;
     margin: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centrado horizontalmente */
-    margin-top: 50px;
+    align-items: center;
 }
 
 header {
-    padding: 20px; /* Añadido padding para mejorar el espaciado */
+    padding: 20px;
 }
 
 h1 {
@@ -25,35 +24,79 @@ h2 {
     color: grey;
 }
 
-section .galeria {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que las imágenes se ajusten */
-    justify-content: center; /* Centrado de las imágenes */
+img {
+    max-width: 100%;
+    margin-bottom: 0.5em;
+    display: block;
+    /* animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%; */
 }
 
-section .galeria img {
-    /* width: 150px;  */
-    /* height: auto;  */
-    margin: 5px; 
+.gallery {
+    columns: 5 320px; /* For desktop */
+    column-gap: 0.5em;
 }
+
 button {
-    padding: 20px 60px; border-radius: 10px;
+    padding: 20px 60px;
+    border-radius: 10px;
     margin: 20px;
     font-size: 19px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    border: none;
-    background-color: #da9cea;
-    color: #3a0846;
-    transition: all 0.3s ease;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(0, 0, 0); 
+    transition: all 0.4s ease;
 }
 
 button:hover {
     cursor: pointer;
     scale: 1.1;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid black;  
 }
 
-@media (min-width: 375px) and (max-width: 414px) {
-    /* section .galeria img {
-        width: calc(50% - 10px);
-    } */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 100px;
+        scale: .5;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .gallery {
+        columns: 3 200px; /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        columns: 2 150px; /* 2 columns for mobile */
+    }
+
+    button {
+        padding: 15px 40px; /* Smaller button for mobile */
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 375px) {
+    .gallery {
+        columns: 1 100%; /* 1 column for very small mobile screens */
+    }
+
+    button {
+        padding: 12px 30px; /* Even smaller button for very small screens */
+        font-size: 14px; /* Smaller font size for very small screens */
+    }
 }
