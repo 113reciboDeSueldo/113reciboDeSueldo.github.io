@@ -65,8 +65,6 @@ button {
     font-size: 19px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     border: none;
-    background-color: #BBE4FC;
-    color: #095583;
     font-weight: 500;
     transition: all 0.4s ease;
 }
@@ -74,9 +72,8 @@ button {
 button:hover {
     cursor: pointer;
     scale: 1.1;
-    background-color: #095583;
-    color: #BBE4FC;
 }
+
 
 footer {
     position: absolute;
