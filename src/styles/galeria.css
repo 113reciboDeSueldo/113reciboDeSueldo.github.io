@@ -28,9 +28,9 @@ img {
     max-width: 100%;
     margin-bottom: 0.5em;
     display: block;
-    /* animation: reveal linear both;
+    animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 50%; */
+    animation-range: entry 20% cover 40%;
 }
 
 .gallery {
@@ -66,17 +66,16 @@ button:focus {
     border: 2px solid black;  
 }
 
-
 @keyframes reveal {
     from {
         opacity: 0;
-        translate: 0 100px;
-        scale: .5;
+        /* translate: 0 100px;
+        scale: .5; */
     }
     to {
         opacity: 1;
-        translate: 0 0;
-        scale: 1;
+        /* translate: 0 0;
+        scale: 1; */
     }
 }
 

@@ -1,0 +1,98 @@
+body {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin: 5px;
+}
+
+h2 {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: grey;
+}
+
+button {
+    padding: 20px 60px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 19px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(0, 0, 0); 
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid black;  
+}
+
+button:focus {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid black;  
+}
+
+.poemas-container { display: flex; flex-wrap: wrap; gap: 50px; max-width: 90%; margin: 50px;}
+
+.poemas-card { background-color: white; padding: 50px; border-radius: 10px; box-shadow: 0 0px 5px 7px rgba(0, 0, 0, 0.1); width: 350px; transition: transform 0.2s; display: flex; justify-content: center; flex-direction: column; animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;}
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+            /* translate: 0 100px;
+            scale: .5; */
+        }
+        to {
+            opacity: 1;
+            /* translate: 0 0;
+            scale: 1; */
+        }
+    }
+
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 1.2rem; /* Ajuste del tamaño de fuente para móviles */
+        }
+    
+        h2 {
+            font-size: 1rem; /* Ajuste del tamaño de fuente para móviles */
+        }
+    
+        .poemas-card {
+            padding: 20px; /* Reducir padding en móviles */
+            width: 100%; /* Usar todo el ancho disponible */
+            max-width: none; /* Eliminar el límite de ancho en móviles */
+        }
+    
+        button {
+            padding: 10px 30px; /* Ajuste del tamaño del botón en móviles */
+            font-size: 16px; /* Reducir ligeramente el tamaño de la fuente */
+        }
+    
+        .poemas-container {
+            gap: 20px; /* Reducir el espacio entre las tarjetas en móviles */
+        }
+    }
