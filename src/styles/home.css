@@ -2,6 +2,7 @@ body {
     position: relative;
     margin: 0;
     --background-image: url('/src/images/noche-estrellada.jpg'); /* Default background */
+    height: 100vh;
 }
 
 body::before {
@@ -24,11 +25,11 @@ body::before {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     position: relative;
     z-index: 1;
+    height: 100%;
 }
 
 .bienvenida .text {
@@ -86,10 +87,14 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 @media (min-width: 375px) and (max-width: 414px) {
     section .galeria img {
         width: calc(50% - 10px);
+    }
+    .bienvenida {
+        justify-content: flex-start; padding: 50px; width: 100%;
     }
 }
